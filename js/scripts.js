@@ -30,3 +30,14 @@ function pigConsanant(word) {
 function pigVowel(word) {
   return word + 'ay';
 }
+
+$(document).ready(function() {
+ $("form#pigLatin").submit(function(event) {
+  var userInput = $("#pigLatinInput").val();
+  var pigLatinInput = pigLatin(userInput);
+
+  $("#result").show().text(pigLatinInput);
+
+  event.preventDefault();
+ });
+});
